@@ -12,6 +12,7 @@ import { Navigation, Pagination, Autoplay } from "swiper/modules";
 const Banner = () => {
   const [bannerImg, setBannerImg] = useState([]);
 
+  //fetch data 
   useEffect(() => {
     fetch(
       "https://api.spoonacular.com/recipes/complexSearch?apiKey=601c03afbeef44e79d118dadd942f3b1"
@@ -35,6 +36,7 @@ const Banner = () => {
         modules={[Autoplay, Pagination, Navigation]}
         className="mySwiper"
       >
+        {/* slider image  */}
         {bannerImg.map((bannerItem) => (
           <SwiperSlide>
             <img
