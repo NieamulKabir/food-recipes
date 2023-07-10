@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { NavLink } from "react-router-dom";
 
 const ImageGallery = () => {
   const [foodItem, setFoodItem] = useState([]);
@@ -24,11 +25,13 @@ const ImageGallery = () => {
                 <img src={item.image} alt="food" />
               </figure>
               <div className="card-body">
-                <button>
-                  <h2 className="card-title">
-                    {item.id}.{item.title}
-                  </h2>
-                </button>
+                <NavLink to={`/foodDetails/${item.id}`}>
+                  <button>
+                    <h2 className="card-title">
+                      {item.id}.{item.title}
+                    </h2>
+                  </button>
+                </NavLink>
               </div>
             </div>
           </div>
