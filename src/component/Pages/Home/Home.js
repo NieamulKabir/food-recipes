@@ -5,8 +5,8 @@ import ImageGallery from './ImageGallery';
 const Home = () => {
     return (
         <div>
-            <Banner ></Banner>
-            <ImageGallery />
+            {/* <Banner ></Banner>
+            <ImageGallery /> */}
         </div>
     );
 };
