@@ -6,7 +6,7 @@ const Footer = () => {
   const year = today.getFullYear();
   return (
     <div>
-      <footer className="footer footer-center p-10 bg-[#dafde1] text-gray-700 mt-10">
+      <footer className="footer footer-center p-10 bg-[#06b856] text-white mt-10">
         <div>
           <img
             className="w-16 h-16 rounded-full"
@@ -16,7 +16,7 @@ const Footer = () => {
           <p className="font-bold">Banolata Food Place</p>
           <p>
             Copyright © {year} - All right reserved by{" "}
-            <span className="font-bold text-purple-500">Nieamul</span>{" "}
+            <span className="font-bold text-gray-800">Nieamul</span>{" "}
           </p>
         </div>
         <div>

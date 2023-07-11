@@ -7,7 +7,7 @@ import FoodItemDetails from "./component/Pages/Home/FoodItemDetails/FoodItemDeta
 
 function App() {
   return (
-    <div className="">
+    <div className="bg-gray-300">
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
