@@ -18,14 +18,14 @@ const ImageGallery = () => {
       </h1>
 
       <div className="grid grid-cols-4 gap-10">
-        {foodItem.map((item) => (
+        {foodItem?.map((item) => (
           <div key={item.id} className="w-11/12 mx-auto">
             <div className="card  glass">
               <figure>
                 <img src={item.image} alt="food" />
               </figure>
               <div className="card-body">
-                <NavLink to={`/foodDetails/${item.id}`}>
+                <NavLink to={`/foodDetails/${item?.id}`}>
                   <button>
                     <h2 className="card-title">
                       {item.id}.{item.title}

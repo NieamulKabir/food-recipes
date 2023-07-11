@@ -3,18 +3,23 @@ import { Link, NavLink } from "react-router-dom";
 
 let activeStyle = {
   textDecoration: "underline",
-  color: "#7c3aed",
+  color: "rgb(23 23 23)",
 };
 
 const Navbar = () => {
   return (
     <>
-      <nav className="sticky top-0 w-full z-50 text-gray-800 ">
-        <div className="navbar bg-[#dafde1]">
+      <nav className="sticky top-0 w-full z-50 text-white ">
+        <div className="navbar bg-[#06b856]">
           <div className="flex-1 md:pl-5 mx-2">
             <Link to="/">
-              <div className="relative top-[]">
-                <p className="font-mono font-extrabold text-base text-violet-600  md:text-2xl ml-4">
+              <div className="relative top-[] flex justify-center items-center">
+                <img
+                  className="h-8 w-8 rounded-2xl"
+                  src="https://i.ibb.co/QDBwBy8/logo.png"
+                  alt=""
+                />
+                <p className="font-mono font-extrabold text-base text-white md:text-2xl">
                   Food & Recipes
                 </p>
               </div>
@@ -23,7 +28,7 @@ const Navbar = () => {
 
           <div className="hidden mx-2 lg:flex">
             <div className="flex items-center">
-              <h1 className="btn font-bold hover:bg-rose-100   btn-ghost text-gray-800 rounded-btn mr-2">
+              <h1 className="btn font-bold hover:bg-slate-600  btn-ghost text-white rounded-btn mr-2">
                 <NavLink
                   to="/home"
                   style={({ isActive }) => (isActive ? activeStyle : undefined)}
@@ -31,7 +36,7 @@ const Navbar = () => {
                   <button className="py-3">HOME</button>
                 </NavLink>
               </h1>
-              <h1 className="btn font-bold hover:bg-rose-100   btn-ghost text-gray-800 rounded-btn mr-2">
+              <h1 className="btn font-bold hover:bg-slate-600  btn-ghost text-white rounded-btn mr-2">
                 <NavLink
                   to="/our-food"
                   style={({ isActive }) => (isActive ? activeStyle : undefined)}
@@ -39,7 +44,7 @@ const Navbar = () => {
                   <button className="py-3">OUR FOOD</button>
                 </NavLink>
               </h1>
-              <h1 className="btn font-bold hover:bg-rose-100   btn-ghost text-gray-800 rounded-btn mr-2">
+              <h1 className="btn font-bold hover:bg-slate-600  btn-ghost text-white rounded-btn mr-2">
                 <NavLink
                   to="/contact"
                   style={({ isActive }) => (isActive ? activeStyle : undefined)}

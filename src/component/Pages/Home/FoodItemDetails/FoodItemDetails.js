@@ -12,28 +12,38 @@ const FoodItemDetails = () => {
       .then((res) => res.json())
       .then((data) => setItemDetails(data));
   }, [foodItemId]);
+
+  console.log(setItemDetails);
   return (
     <div>
-      <h1>
-        {itemDetails.map((item) => (
-          <div key={item.item} className="card  bg-base-100 shadow-xl">
-            <figure className="px-10 pt-10">
-              <img
-                src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
-                alt="Shoes"
-                className="rounded-xl"
-              />
-            </figure>
-            <div className="card-body items-center text-center">
-              <h2 className="card-title">{item.title}</h2>
-              <p>If a dog chews shoes whose shoes does he choose?</p>
-              <div className="card-actions">
-                <button className="btn btn-primary">Buy Now</button>
-              </div>
-            </div>
+      <div className="card w-[70%] mx-auto bg-base-100 shadow-xl">
+        <figure>
+          <img className="w-full " src={itemDetails.image} alt="Food Recipes" />
+        </figure>
+        <div className="card-body">
+          <h2 className="card-title">{itemDetails.title}</h2>
+          <div>
+            <i className="fa-solid fa-dollar-sign"></i>
+            <h3>Per Serving: {itemDetails?.pricePerServing}</h3>
           </div>
-        ))}
-      </h1>
+          <div>
+            <i className="fa-solid fa-heart"></i>
+            <h3>Per Serving: {itemDetails?.aggregateLikes}</h3>
+          </div>
+          <div>
+            <i className="fa-solid fa-timer"></i>
+            <h3>Ready in: {itemDetails?.readyInMinutes} mins</h3>
+          </div>
+          <div>
+            <i className="fa-regular fa-wave-pulse"></i>
+            <h3>Health Score: {itemDetails?.healthScore} mins</h3>
+          </div>
+          <p>{itemDetails.instructions}</p>
+          <div className="card-actions justify-end">
+            <button className="btn btn-primary">Buy Now</button>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
