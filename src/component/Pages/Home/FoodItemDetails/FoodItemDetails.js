@@ -37,9 +37,9 @@ const FoodItemDetails = () => {
             {itemDetails.title}
           </h2>
           <div className="md:flex justify-between">
-            <div>
+            <div className="flex item-center justify-between">
               <p className="text-xl font-extrabold">
-                <i className="fa-solid fa-dollar-sign"></i>
+                <i className="fa-solid fa-dollar-sign pr-2"></i>
               </p>
               <h3 className="lg:text-lg font-bold">
                 Per Serving:{" "}
@@ -48,9 +48,9 @@ const FoodItemDetails = () => {
                 </span>
               </h3>
             </div>
-            <div>
+            <div className="flex item-center justify-between">
               <p className="text-xl font-extrabold">
-                <i className="fa-solid fa-heart"></i>
+                <i className="fa-solid fa-heart pr-2"></i>
               </p>
               <h3 className="lg:text-lg font-bold">
                 Likes:{" "}
@@ -59,20 +59,20 @@ const FoodItemDetails = () => {
                 </span>
               </h3>
             </div>
-            <div>
+            <div className="flex item-center justify-between">
               <p className="text-xl font-extrabold">
-                <i className="fa-solid fa-clock"></i>
+                <i className="fa-solid fa-clock  pr-2"></i>
               </p>
               <h3 className="lg:text-lg font-bold">
                 Ready in:{" "}
                 <span className="text-green-700">
-                  {itemDetails?.readyInMinutes} minutes{" "}
+                  {itemDetails?.readyInMinutes} min{" "}
                 </span>
               </h3>
             </div>
-            <div>
+            <div className="flex item-center justify-between">
               <p className="text-xl font-extrabold">
-                <i className="fa-solid fa-user-doctor"></i>
+                <i className="fa-solid fa-user-doctor  pr-2"></i>
               </p>
               <h3 className="lg:text-lg font-bold">
                 Health Score:{" "}

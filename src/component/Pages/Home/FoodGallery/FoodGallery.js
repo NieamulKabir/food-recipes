@@ -26,13 +26,13 @@ const FoodGallery = () => {
         Here is Our Food Items
       </h1>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mt-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-8">
         {foodItem?.map((item) => (
           <div key={item.id} className="w-11/12 mx-auto">
-            <div className="card  glass lg:h-[410px]">
+            <div className="card glass md:h-[410px]">
               <figure>
                 <img
-                  className="w-full lg:h-[300px]"
+                  className="w-full object-cover md:h-[280px]"
                   src={item.image}
                   alt="Food Recipes"
                 />
