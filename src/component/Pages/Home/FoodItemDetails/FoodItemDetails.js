@@ -27,7 +27,7 @@ const FoodItemDetails = () => {
       <div className="card w-[70%] mx-auto bg-base-100 shadow-xl mt-10">
         <figure>
           <img
-            className="w-full h-[400px] lg:h-[500px]"
+            className="w-full h-[300px] lg:h-[500px]"
             src={itemDetails.image}
             alt="Food Recipes"
           />
@@ -36,13 +36,16 @@ const FoodItemDetails = () => {
           <h2 className="card-title lg:text-2xl font-bold pb-6">
             {itemDetails.title}
           </h2>
-          <div className="flex justify-between">
+          <div className="md:flex justify-between">
             <div>
               <p className="text-xl font-extrabold">
                 <i className="fa-solid fa-dollar-sign"></i>
               </p>
               <h3 className="lg:text-lg font-bold">
-                Per Serving: <span className="text-green-700">{itemDetails?.pricePerServing}</span>
+                Per Serving:{" "}
+                <span className="text-green-700">
+                  {itemDetails?.pricePerServing}
+                </span>
               </h3>
             </div>
             <div>
@@ -50,32 +53,37 @@ const FoodItemDetails = () => {
                 <i className="fa-solid fa-heart"></i>
               </p>
               <h3 className="lg:text-lg font-bold">
-                Likes: <span className="text-green-700">{itemDetails?.aggregateLikes} likes </span>
+                Likes:{" "}
+                <span className="text-green-700">
+                  {itemDetails?.aggregateLikes} likes{" "}
+                </span>
               </h3>
-
             </div>
             <div>
               <p className="text-xl font-extrabold">
                 <i className="fa-solid fa-clock"></i>
               </p>
               <h3 className="lg:text-lg font-bold">
-                Ready in: <span className="text-green-700">{itemDetails?.readyInMinutes} minutes </span>
+                Ready in:{" "}
+                <span className="text-green-700">
+                  {itemDetails?.readyInMinutes} minutes{" "}
+                </span>
               </h3>
-
             </div>
             <div>
               <p className="text-xl font-extrabold">
                 <i className="fa-solid fa-user-doctor"></i>
               </p>
               <h3 className="lg:text-lg font-bold">
-                Health Score: <span className="text-green-700">{itemDetails?.healthScore}%</span>
+                Health Score:{" "}
+                <span className="text-green-700">
+                  {itemDetails?.healthScore}%
+                </span>
               </h3>
             </div>
           </div>
-          <p className="pt-6">
-          {itemDetails.instructions}
-          </p>
-         
+          <p className="pt-6">{itemDetails.instructions}</p>
+
           <div className="card-actions justify-end">
             <NavLink to="/">
               <button className="btn bg-green-600 hover:bg-green-600 text-white">
@@ -88,7 +96,6 @@ const FoodItemDetails = () => {
           </div>
         </div>
       </div>
-      
     </div>
   );
 };
